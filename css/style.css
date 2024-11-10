@@ -40,7 +40,6 @@
 :root {
   --bs-black: #343434;
   --custom-light-color: #f8f8f8;
-  --white-color: #fff;
   --custom-light-black: #222;
   --color-light: #fff;
   --color-light-grey: #eee;
@@ -69,7 +68,7 @@
 }
 ::selection {
   background-color: var(--selection-color);
-  color: var(--bs-black);
+  color: var(--color-light);
 }
 body {
   font-family: "Poppins", serif;
@@ -348,11 +347,11 @@ header .typing::after {
   align-items: center;
 }
 .social ul li a {
-  color: var(--white-color);
+  color: var(--color-light);
   font-size: 18px;
 }
 .team ul li a {
-  color: var(--white-color);
+  color: var(--color-light);
   font-size: 18px;
 }
 #team .card:hover .social {
@@ -366,14 +365,14 @@ header .typing::after {
   scale: 1.1;
 }
 .social ul li:hover {
-  background-color: var(--white-color);
+  background-color: var(--color-light);
   border: 1px solid black;
 }
 .social ul li:hover a {
   color: black;
 }
 .card-body {
-  background-color: var(--bs-black);
+  background-color: var(--);
 }
 .card {
   --bs-border-color-translucent: 0;
