@@ -114,6 +114,35 @@ a {
   z-index: -1;
 }
 /* -- End Global Style -- */
+/* Show the preloader initially */
+/* Preloader styling */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeOut 0.8s ease-out 0.8s forwards;
+}
+.spinner-border, .spinner-grow {
+  --bs-spinner-animation-speed: 0.5s;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+body:has(.loaded) {
+  display: block;
+}
+
 /* -- Start Navbar -- */
 nav {
   left: 0;
@@ -331,7 +360,7 @@ header .typing::after {
   bottom: 100px;
   opacity: 0;
   transition: all 0.5s;
-  transform: rotateY(180deg) scale(0.2 ,0.2);
+  transform: rotateY(180deg) scale(0.2, 0.2);
   left: 0;
   right: 0;
   text-align: center;
