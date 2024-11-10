@@ -211,7 +211,7 @@ header .typing::after {
   outline-color: var(--color-light-grey);
 }
 .services-item:hover .services-icon i {
-  color: var(--white-color);
+  color: var(--color-light);
 }
 /* End Services Section */
 /* Start Work Section (Portfolio Section) */
@@ -372,7 +372,7 @@ header .typing::after {
   color: black;
 }
 .card-body {
-  background-color: var(--);
+  background-color: var(--bs-black);
 }
 .card {
   --bs-border-color-translucent: 0;
