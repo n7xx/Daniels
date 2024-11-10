@@ -114,8 +114,8 @@ a {
   z-index: -1;
 }
 /* -- End Global Style -- */
-/* Show the preloader initially */
-/* Preloader styling */
+/* Show the preloader */
+/* Start Preloader styling */
 .preloader {
   position: fixed;
   top: 0;
@@ -142,7 +142,7 @@ a {
 body:has(.loaded) {
   display: block;
 }
-
+/* End Preloader styling */
 /* -- Start Navbar -- */
 nav {
   left: 0;
