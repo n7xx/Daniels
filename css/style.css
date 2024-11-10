@@ -1,0 +1,409 @@
+/* -- Start Font Face */
+@font-face {
+  font-family: Montserrat-R;
+  src: url(../webFonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-B;
+  src: url(../webFonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat-XB;
+  src: url(../webFonts/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Montserrat-L;
+  src: url(../webFonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: Montserrat-Th;
+  src: url(../webFonts/Montserrat-Thin.ttf);
+}
+.font-th {
+  font-family: Montserrat-Th;
+}
+.font-l {
+  font-family: Montserrat-L;
+}
+.font-r {
+  font-family: Montserrat-R;
+}
+.font-b {
+  font-family: Montserrat-B;
+}
+.font-xb {
+  font-family: Montserrat-XB;
+}
+
+/* -- End Font Face -- */
+/* -- Start Global Style -- */
+:root {
+  --bs-black: #343434;
+  --custom-light-color: #f8f8f8;
+  --white-color: #fff;
+  --custom-light-black: #222;
+  --color-light: #fff;
+  --color-light-grey: #eee;
+  --selection-color: #3434345a;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--color-light);
+  border-left: 1px solid var(--color-light-grey);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    100deg,
+    var(--bs-black),
+    var(--custom-light-black)
+  );
+  border-radius: 0.627rem;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+::-moz-selection {
+  background-color: var(--selection-color);
+  color: var(--bs-black);
+}
+::selection {
+  background-color: var(--selection-color);
+  color: var(--bs-black);
+}
+body {
+  font-family: "Poppins", serif;
+}
+h1 {
+  font-size: 50px;
+}
+a {
+  text-decoration: none;
+}
+.sec-p {
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+.bg-gray {
+  background-color: var(--custom-light-color);
+}
+.fs-7 {
+  font-size: 14px;
+}
+#outline-hover-here:hover {
+  background-color: transparent;
+  color: black;
+}
+.text-black-custom {
+  color: #444;
+}
+/* Section Head */
+.section-head h3 {
+  font-weight: 800;
+  font-size: 40px;
+  color: var(--bs-black);
+}
+.section-head h3:after {
+  content: "";
+  width: 30%;
+  height: 35px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 35%;
+  z-index: -1;
+}
+/* -- End Global Style -- */
+/* -- Start Navbar -- */
+nav {
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+.navbar-toggler {
+  border: 0;
+}
+nav ul li a {
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 15%;
+  bottom: 5px;
+  background: var(--afterColour);
+  transition: width 0.3s;
+}
+nav ul li a.active::after {
+  width: 70%;
+}
+/* -- End Navbar -- */
+/* Start Header (Home section) */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/bg.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header .typing {
+  font-size: 35px;
+}
+header .typing::after {
+  content: "";
+  font-family: Montserrat-r;
+  animation: Typing 8s infinite;
+}
+.home-social li {
+  margin-right: 6px;
+  font-size: 16px;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End Header (Home section) */
+/* Start About (Hero section) */
+.hero-img::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+.sub-head {
+  letter-spacing: 2px;
+}
+.progress {
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.btn {
+  transition: all 0.4s;
+}
+/* End About (Hero section) */
+/* Start Services Section */
+.services-icon {
+  background-color:var(--custom-light-color);
+  width: 70px;
+  height: 70px;
+  outline: 4px solid var(--selection-color);
+  transition: all 0.4s;
+}
+.services-item:hover .services-icon {
+  background-color: var(--bs-black);
+  outline-color: var(--color-light-grey);
+  
+}
+.services-item:hover .services-icon i {
+  color: var(--white-color);
+}
+/* End Services Section */
+/* Start Work Section (Portfolio Section) */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+  font-weight: 700;
+}
+.nav-tabs .nav-link {
+  position: relative;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: black;
+  transition: 0.3s all;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active::after {
+  width: 100%;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  isolation: isolate;
+  border-color: transparent;
+}
+.nav-tabs .nav-link {
+  color: black;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.portfolio-overlay {
+  background-color: #f1f1f1;
+  position: absolute;
+  inset: 6%;
+  transform: translateY(1000px);
+  transition: all 0.5s;
+}
+.portfolio-icons a {
+  background-color: var(--bs-black);
+  width: 30px;
+  height: 30px;
+  transition: all 0.4s;
+}
+.portfolio-icons a:hover {
+  --bs-white-rgb: 0, 0, 0;
+  background-color: transparent;
+  border: 1px solid var(--bs-black);
+  color: var(--bs-white-rgb);
+}
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0px);
+}
+.modal-dialog {
+  --bs-modal-width: 750px;
+}
+.modal-header {
+  --bs-modal-header-border-width: 0;
+}
+.modal-content {
+  --bs-modal-bg: transparent;
+  --bs-modal-border-width: 0;
+}
+.prev-icon {
+  left: 15px;
+  color: var(--bs-black);
+}
+.next-icon {
+  right: 15px;
+  color: var(--bs-black);
+}
+.btn-close {
+  --bs-btn-close-color: var(--white-color);
+  --bs-btn-close-bg: url;
+}
+/* End Work Section (Portfolio Section) */
+/* Start Clients Section */
+/* Testimonials Section */
+.carousel-control-next.testi-carousel i,
+.carousel-control-prev.testi-carousel i {
+  font-size: 12px;
+}
+.carousel-control-next.testi-carousel,
+.carousel-control-prev.testi-carousel {
+  position: static;
+  width: auto;
+}
+/* Counter Section */
+.counter .icon {
+  background: none;
+  color: var(--bs-black);
+}
+.counter .icon i {
+  color: var(--bs-black);
+  font-size: 30px;
+}
+.counter-number {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--bs-black);
+}
+/* End Cleints Section */
+/* Start Our Teams Section */
+.social {
+  top: 0;
+  bottom: 100px;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.social ul li {
+  background: #1c1c1c;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social ul li a {
+  color: var(--white-color);
+  font-size: 18px;
+}
+.team ul li a {
+  color: var(--white-color);
+  font-size: 18px;
+}
+#team .card:hover .social {
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+.img-area img {
+  transition: all 0.5s;
+}
+#team .img-area:hover img {
+  scale: 1.1;
+}
+.social ul li:hover {
+  background-color: var(--white-color);
+  border: 1px solid black;
+}
+.social ul li:hover a {
+  color: black;
+}
+.card-body {
+  background-color: var(--bs-black);
+}
+.card {
+  --bs-border-color-translucent: 0;
+}
+/* End Our Teams Section */
+/* Start Contacts Section */
+.contact-icon {
+  font-size: 25px;
+  background-color: var(--custom-light-color);
+  width: 60px;
+  height: 60px;
+  transition: all 0.4s;
+}
+#contact .info .item:hover .contact-icon i {
+  color: var(--color-light-grey);
+}
+#contact .info .item:hover .contact-icon{
+  background-color: var(--bs-black);
+}
+.form-control {
+  background-color: var(--custom-light-color);
+}
+.form-control:focus {
+  background-color: var(--custom-light-color);
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.25);
+}
+#message {
+  resize: none;
+}
+/* End Contacts Section */
+.footer-caption {
+  color: #bebebe;
+}
+.footer {
+  background-color: var(--bs-black);
+}
