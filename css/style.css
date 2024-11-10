@@ -294,6 +294,10 @@ header .typing::after {
   --bs-btn-close-color: var(--white-color);
   --bs-btn-close-bg: url;
 }
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
 /* End Work Section (Portfolio Section) */
 /* Start Clients Section */
 /* Testimonials Section */
