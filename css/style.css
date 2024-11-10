@@ -332,7 +332,7 @@ header .typing::after {
   bottom: 100px;
   opacity: 0;
   transition: all 0.5s;
-  transform: rotateY(180deg) scale(0.5, 0.5);
+  transform: rotateY(180deg) scale(0.2 ,0.2);
   left: 0;
   right: 0;
   text-align: center;
