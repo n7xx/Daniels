@@ -201,7 +201,7 @@ header .typing::after {
 /* End About (Hero section) */
 /* Start Services Section */
 .services-icon {
-  background-color:var(--custom-light-color);
+  background-color: var(--custom-light-color);
   width: 70px;
   height: 70px;
   outline: 4px solid var(--selection-color);
@@ -210,7 +210,6 @@ header .typing::after {
 .services-item:hover .services-icon {
   background-color: var(--bs-black);
   outline-color: var(--color-light-grey);
-  
 }
 .services-item:hover .services-icon i {
   color: var(--white-color);
@@ -225,7 +224,7 @@ header .typing::after {
 .nav-tabs .nav-link {
   position: relative;
 }
-.nav-tabs .nav-item.show .nav-link,
+
 .nav-tabs .nav-link::after {
   content: "";
   position: absolute;
@@ -233,10 +232,10 @@ header .typing::after {
   height: 2px;
   left: 0;
   bottom: 0;
-  background: black;
+  background: var(--bs-black);
   transition: 0.3s all;
 }
-.nav-tabs .nav-item.show .nav-link,
+
 .nav-tabs .nav-link.active::after {
   width: 100%;
 }
@@ -246,15 +245,16 @@ header .typing::after {
   border-color: transparent;
 }
 .nav-tabs .nav-link {
-  color: black;
+  color: var(--bs-black);
   font-weight: 700;
   margin-right: 10px;
 }
 .portfolio-overlay {
-  background-color: #f1f1f1;
+  background-color: var(--color-light);
   position: absolute;
   inset: 6%;
-  transform: translateY(1000px);
+  transform: translateY(50px);
+  opacity: 0;
   transition: all 0.5s;
 }
 .portfolio-icons a {
@@ -271,6 +271,7 @@ header .typing::after {
 }
 .portfolio-item:hover .portfolio-overlay {
   transform: translateY(0px);
+  opacity: 1;
 }
 .modal-dialog {
   --bs-modal-width: 750px;
@@ -295,8 +296,8 @@ header .typing::after {
   --bs-btn-close-bg: url;
 }
 .btn-close:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 /* End Work Section (Portfolio Section) */
 /* Start Clients Section */
@@ -389,7 +390,7 @@ header .typing::after {
 #contact .info .item:hover .contact-icon i {
   color: var(--color-light-grey);
 }
-#contact .info .item:hover .contact-icon{
+#contact .info .item:hover .contact-icon {
   background-color: var(--bs-black);
 }
 .form-control {
